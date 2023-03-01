@@ -1,23 +1,9 @@
-import './App.css';
-import { Logo } from "./components/Logo";
-import { Navigation } from "./components/Navigation";
-import { CoinFlip } from "./components/CoinFlip";
+import { SignInPage } from "./pages/SignInPage";
 
 function App() {
-  const today = new Date();
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
-        <h1>Hello World!</h1>
-        <p>{today.toLocaleString()}</p>
-        <CoinFlip />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Navigation />
-      </header>
+    <div>
+        <SignInPage />
     </div>
   );
 }
