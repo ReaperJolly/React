@@ -7,7 +7,7 @@ export function SignInPage() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(formState);
+        props.onSubmit(formState);
     }
 
     function handleUsernameChange(value) {
