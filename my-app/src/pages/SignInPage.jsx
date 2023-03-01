@@ -2,7 +2,7 @@ import { useState } from "react";
 import { InputFormField } from "../components/InputFormField";
 import { SubmitFormField } from "../components/SubmitFormField";
 
-export function SignInPage() {
+export function SignInPage(props) {
     const [ formState, setFormState ] = useState("");
 
     function handleSubmit(event) {
