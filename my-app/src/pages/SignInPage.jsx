@@ -15,20 +15,13 @@ export function SignInPage(props) {
         setFormState(value);
     }
 
-    function handlePasswordChange(value) {
-        setFormState(value);
-    }
-
-    console.log(formState);
-
     return (
         <div className="sign-in-page">
             <div className="card">
                 <form className="sign-in-form" onSubmit={handleSubmit}> 
                     <InputFormField label="Username" type="text" onChange={handleUsernameChange} value={formState} />
-                    <InputFormField label="Password" type="password" onChange={handlePasswordChange} />
                     <RandomNameButton onRandomName={handleUsernameChange} />
-                    <SubmitFormField />
+                    <SubmitFormField label="Sign in"/>
                 </form> 
             </div>
         </div>

@@ -1,7 +1,7 @@
-export function SubmitFormField () {
+export function SubmitFormField (props) {
     return (
         <div className="submit-form-field">
-            <button>Sign In</button>
+            <button type="submit">{props.label}</button>
         </div> 
     );
-};
+}
