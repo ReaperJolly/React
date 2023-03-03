@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InputFormField } from "../components/InputFormField";
+import { RandomNameButton } from "../components/RandomNameButton";
 import { SubmitFormField } from "../components/SubmitFormField";
 
 export function SignInPage(props) {
@@ -18,12 +19,15 @@ export function SignInPage(props) {
         setFormState(value);
     }
 
+    console.log(formState);
+
     return (
         <div className="sign-in-page">
             <div className="card">
                 <form className="sign-in-form" onSubmit={handleSubmit}> 
-                    <InputFormField label="Username" type="text" onChange={handleUsernameChange}/>
+                    <InputFormField label="Username" type="text" onChange={handleUsernameChange} value={formState} />
                     <InputFormField label="Password" type="password" onChange={handlePasswordChange} />
+                    <RandomNameButton onRandomName={handleUsernameChange} />
                     <SubmitFormField />
                 </form> 
             </div>
