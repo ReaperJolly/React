@@ -6,7 +6,7 @@ const messages = [
     {
         id: "1234", 
         author: {
-            username: "Domagoj",
+            username: "Jack",
             avatarIndex: 0,
         },
         text: "Lorem ipsum dolor sit amet",
