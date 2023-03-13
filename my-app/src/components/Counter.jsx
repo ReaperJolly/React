@@ -1,11 +1,5 @@
 import { useState } from "react";
 
-/**
- * Koristiti toFixed metodu da definiramo preciznost decimala countera.
- * Omogućiti da se preciznost definira preko props "precision".
- * BONUS: Ako "precision" nije definiran, koristiti 0 za preciznost.
- */
-
 export function Counter(props) {
     const [count, setCount] = useState(props.initialValue);
 
