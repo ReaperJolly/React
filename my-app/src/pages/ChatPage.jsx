@@ -2,12 +2,26 @@ import { InputFormField } from "../components/InputFormField";
 import { SubmitFormField } from "../components/SubmitFormField";
 import { Message } from "../components/Message";
 
+const messages = [
+    {
+        id: "1234", 
+        author: {
+            username: "Domagoj",
+            avatarIndex: 0,
+        },
+        text: "Lorem ipsum dolor sit amet",
+    },
+];
+
+
 export function ChatPage() {
+    const message = messages [0];
+
     return (
         <div>
             Chat page 
             <div className="message-list"> 
-                <Message author="John" text="Lorem ipsum" />
+                <Message avatarIndex={message.author.avatarIndex} author={message.author.username} text={message.text} />
                 <Message author="Jack" text="Dolor sit amen"/>
             </div>
             <form>
