@@ -4,8 +4,6 @@ import { Button } from "../components/Button";
 import { FormField } from "../components/FormField";
 import { InputFormField } from "../components/InputFormField";
 import { RandomNameButton } from "../components/RandomNameButton";
-import { RandomNameFormField } from "../components/RandomNameFormField";
-import { SubmitFormField } from "../components/SubmitFormField";
 import { getRandomName } from "../library/random";
 
 export function SignInPage(props) {
@@ -32,10 +30,7 @@ export function SignInPage(props) {
             <div className="card">
                 <form className="sign-in-form" onSubmit={handleSubmit}>
                     <AvatarFormField onChange={handleAvatarChange} />
-                    <InputFormField label="Username"
-                        type="text"
-                        onChange={handleUsernameChange}
-                        value={formState} />
+                    <InputFormField label="Username" type="text" onChange={handleUsernameChange} value={formState} />     
                     <FormField>
                         <RandomNameButton onRandomName={handleUsernameChange} />
                     </FormField>
