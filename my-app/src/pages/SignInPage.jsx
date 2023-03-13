@@ -12,7 +12,10 @@ export function SignInPage(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.onSubmit(formState);
+        props.onSubmit({
+            username: formState,
+            avatarIndex: avatar,
+        });
     }
 
     function handleUsernameChange(value) {
